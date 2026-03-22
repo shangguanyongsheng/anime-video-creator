@@ -19,7 +19,7 @@ class VideoStyle(Enum):
     ANIME = "anime"           # 日系动漫
     REALISTIC = "realistic"   # 写实风格
     CARTOON = "cartoon"       # 卡通风格
-    3D = "3d"                 # 3D 风格
+    THREE_D = "3d"            # 3D 风格
 
 
 class VideoResolution(Enum):
