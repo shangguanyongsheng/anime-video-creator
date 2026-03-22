@@ -47,9 +47,18 @@
 
 ## 文档目录
 
-- [AI 视频创作助手分析](./docs/ai-video-creator-analysis.md) - GitHub 项目调研
+### 架构设计
+- [系统架构设计](./docs/architecture.md) - 完整架构方案
 - [视频平台趋势分析](./docs/video-platform-trends.md) - 抖音/YouTube 热门内容
-- [厂商能力调研](./docs/ai-video-vendors.md) - 各大厂商 AI 视频能力（待补充）
+- [AI 视频创作助手分析](./docs/ai-video-creator-analysis.md) - GitHub 项目调研
+
+### 厂商对接方案
+- [Runway Gen-3](./docs/vendors/runway.md) - 推荐：API 成熟，动漫风格好
+- [阿里云通义万象](./docs/vendors/alibaba.md) - 国内首选：便宜稳定
+- [火山引擎](./docs/vendors/volcengine.md) - 抖音生态：深度绑定
+- [OpenAI Sora](./docs/vendors/openai-sora.md) - 长视频：支持 60 秒
+- [Pika](./docs/vendors/pika.md) - 二次元：动漫风格最佳
+- [腾讯混元](./docs/vendors/tencent.md) - 微信生态
 
 ## 快速开始
 
