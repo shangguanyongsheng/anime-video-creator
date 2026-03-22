@@ -9,6 +9,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.video_generator import WanxVideoGenerator
+from src.video_generator.wanx_generator import VideoStyle
 from src.post_processor import VoiceGenerator, SubtitleGenerator, VideoComposer
 from src.post_processor.voice_generator import VoiceType
 
@@ -73,7 +74,7 @@ class VideoPipeline:
             video_result = self.video_gen.generate(
                 prompt=prompt,
                 duration=duration,
-                style="anime"
+                style=VideoStyle.ANIME
             )
             
             if not video_result.video_url:
