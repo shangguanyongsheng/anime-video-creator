@@ -70,6 +70,55 @@ pip install ffmpeg-python moviepy openai whisperx edge-tts
 python scripts/generate_video.py --topic "动漫角色盘点" --style anime
 ```
 
+## 快速开始
+
+### 1. 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. 配置 API Key
+
+```bash
+export DASHSCOPE_API_KEY="your-api-key"
+```
+
+### 3. 生成视频
+
+**方式一：命令行**
+
+```bash
+# 生成动漫视频
+python -m src.cli anime --scene "樱花树下" --subject "动漫少女" --action "跳舞"
+
+# 自定义提示词
+python -m src.cli generate --prompt "动漫少女在月光下弹奏古筝" --duration 5 --style anime
+```
+
+**方式二：Python 代码**
+
+```python
+from src.video_generator import WanxVideoGenerator
+
+# 初始化
+generator = WanxVideoGenerator()
+
+# 快捷生成动漫视频
+result = generator.generate_anime(
+    scene="樱花树下",
+    subject="动漫少女",
+    action="优雅地跳舞",
+    duration=5
+)
+
+print(f"视频URL: {result.video_url}")
+print(f"费用: ¥{result.cost:.2f}")
+
+# 下载到本地
+generator.download_video(result.video_url, "output/video.mp4")
+```
+
 ## 许可证
 
 MIT License
